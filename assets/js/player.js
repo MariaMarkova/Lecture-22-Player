@@ -88,7 +88,8 @@ function playAudio(index) {
 	}	
 	
 	document.getElementsByTagName('audio')[0].addEventListener('loadeddata', function() {
-		var sec = this.duration;		
+		var sec = this.duration;
+			
 		endBuff.innerHTML = secToMinutes(sec);
 		
 		document.getElementById('image').src = fullPathImage;
@@ -99,19 +100,23 @@ function playAudio(index) {
 
 function pauseAudio() {	
 	var audio = document.getElementsByTagName("audio")[0];
-	audio.pause();
 	
-	document.addEventListener('click', function() {
-		
-	}, false);
+	if (audio.paused){
+		document.getElementById('pause-play').className = 'fa fa-pause';
+		audio.play();
+	}else {
+		document.getElementById('pause-play').className = 'fa fa-play';
+		audio.pause();
+	}
+	
 }
 
 function forwardAudio() {
-	
+	var audio = document.getElementsByTagName("audio")[0];
 }
 
 function backwardAudio() {
-	
+	var audio = document.getElementsByTagName("audio")[0];
 }
 
 function secToMinutes(sec) {
