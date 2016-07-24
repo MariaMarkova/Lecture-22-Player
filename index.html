@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	<meta charset="UTF-8">
+	<title> Player </title>
+	
+	<link rel="stylesheet" type="text/css" href="assets/css/reset.css" />
+	<link rel="stylesheet" type="text/css" href="assets/css/style.css" />
+	<link rel="stylesheet" type="text/css" href="assets/font-awesome-4.6.3/css/font-awesome.min.css" />
+	<script type="text/javascript" src="assets/js/ajax.js"></script>
+	<script type="text/javascript" src="assets/js/player.js"></script>
+	
+	</head>
+	
+	<body>
+	<!--  <span class="fa fa-camera"></span>  -->
+	<!--  <span class="fa fa-stop"></span>  -->
+	<!--  <span class="fa fa-play"></span>  -->
+	<!--  <span class="fa fa-pause"></span>  -->
+	
+		<div id="wrapper">
+			<div id="header">
+				<img alt="" 
+				src="assets/player_media-master/media/media/2.png"
+				id="image" />
+			</div>
+			
+			<div id="title">
+				<p> Title: </p>
+			</div>
+			
+			<div id="load">
+			
+			</div>
+			
+			<div id="nav">
+				<div id="left">
+					<span id="buff-start">00:00</span>
+				</div>
+				
+				<div id="center">				
+					<button class="fa fa-backward" id="backward" ></button>&ensp;					
+					<button class="fa fa-pause " id="pause" onclick="pauseAudio()"></button>&ensp;
+					<button class="fa fa-forward " id="forward"></button>&ensp;
+				</div>
+				
+				<div id="right">
+					<span id="buff-end">00:00</span>
+				</div>
+				
+			</div>
+		
+			<div id="player-list">
+			<!--<ul>
+				<li>
+					<span class="title">Alborosie - Ragamuffin</span>
+					<span class="fa fa-play" id="play-title"></span>
+				</li>
+					
+			</ul>  -->
+			
+			</div>			
+		</div>
+		
+	</body>
+</html>
