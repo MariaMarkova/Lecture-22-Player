@@ -90,7 +90,7 @@ function playAudio(index) {
 	document.getElementsByTagName('audio')[0].addEventListener('loadeddata', function() {
 		var sec = this.duration;
 			
-		endBuff.innerHTML = secToMinutes(sec);
+		endBuff.innerHTML = "0" + secToMinutes(sec);
 		
 		document.getElementById('image').src = fullPathImage;
 		document.getElementById('title').innerHTML = data[index].artist + ' - ' + data[index].song;
